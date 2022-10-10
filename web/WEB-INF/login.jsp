@@ -17,8 +17,11 @@
         <c:if test="${invalid == true}">
             <p>Please fill in each form box</p>
         </c:if>
-        <c:if test="$(logout == true}">
+        <c:if test="${logoutmessage == true}">
             <p>Successfully logged out</p>
+        </c:if>
+        <c:if test="${wronglogin == true}">
+            <p>Incorrect username or password</p>
         </c:if>
     </body>
 </html>
