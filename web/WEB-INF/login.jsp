@@ -10,12 +10,15 @@
     <body>
         <h1>Login</h1>
         <form method="post" action="login">
-            Username: <input type="text" value="${username}"><br>
-            Password: <input type="text" value="${password}"><br>
+            Username: <input type="text" name="username" value="${username}"><br>
+            Password: <input type="text" name="password" value="${password}"><br>
             <input type="submit" value="Log in">
         </form> 
         <c:if test="${invalid == true}">
-        <p>Please fill in each form box</p>
+            <p>Please fill in each form box</p>
+        </c:if>
+        <c:if test="$(logout == true}">
+            <p>Successfully logged out</p>
         </c:if>
     </body>
 </html>
